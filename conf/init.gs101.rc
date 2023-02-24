@@ -638,18 +638,21 @@ service lhd /vendor/bin/hw/lhd /vendor/etc/gnss/lhd.conf
     user gps
     group system inet net_raw sdcard_rw
     ioprio be 0
+    disabled
 
 service gpsd /vendor/bin/hw/gpsd -c /vendor/etc/gnss/gps.xml
     class main
     user gps
     group system gps radio inet wakelock sdcard_rw net_raw
     ioprio be 0
+    disabled
 
 service scd /vendor/bin/hw/scd /vendor/etc/gnss/scd.conf
     class main
     user gps
     group system inet net_raw wakelock
     ioprio be 0
+    disabled
 
 service gnss_service /vendor/bin/hw/android.hardware.gnss@2.1-service-brcm
     class hal
@@ -657,6 +660,7 @@ service gnss_service /vendor/bin/hw/android.hardware.gnss@2.1-service-brcm
     group system gps radio
     ioprio be 0
     priority -1
+    disabled
 
 # disable gps service if no gps h/w
 on property:vendor.ril.cbd.svc=0
