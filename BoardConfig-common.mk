@@ -69,16 +69,16 @@ TARGET_RECOVERY_FSTAB_GENRULE = gen_fstab.gs101
 TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 165
 TARGET_RECOVERY_UI_LIB := \
-	librecovery_ui_pixel \
-	libfstab
+    librecovery_ui_pixel \
+    libfstab
 
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
-	system \
-	system_ext \
-	product \
-	vbmeta_system
+    system \
+    system_ext \
+    product \
+    vbmeta_system
 
 ifneq ($(PRODUCT_BUILD_BOOT_IMAGE),false)
 AB_OTA_PARTITIONS += boot
@@ -306,7 +306,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Bluetooth defines
 # TODO(b/123695868): Remove the need for this
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := \
-	build/make/target/board/mainline_arm64/bluetooth
+    build/make/target/board/mainline_arm64/bluetooth
 
 #VNDK
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
