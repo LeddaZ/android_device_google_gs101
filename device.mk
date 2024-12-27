@@ -45,7 +45,7 @@ include device/google/gs-common/fingerprint/fingerprint.mk
 include device/google/gs-common/wireless_charger/wireless_charger.mk
 
 TARGET_BOARD_PLATFORM := gs101
-DEVICE_IS_64BIT_ONLY ?= $(if $(filter %_64,$(TARGET_PRODUCT)),true,false)
+DEVICE_IS_64BIT_ONLY := true
 
 ifeq ($(DEVICE_IS_64BIT_ONLY),true)
 LOCAL_64ONLY := _64
