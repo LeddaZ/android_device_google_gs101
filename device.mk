@@ -685,6 +685,12 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.max_frame_buffer_acquir
 # Blur
 TARGET_USES_BLUR := true
 
+# Pixel Launcher
+INCLUDE_PIXEL_LAUNCHER := true
+
+# Game Dashboard
+ENABLE_GAMETOOLS := true
+
 # Must align with HAL types Dataspace
 # The data space of wide color gamut composition preference is Dataspace::DISPLAY_P3
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.wcg_composition_dataspace=143261696
